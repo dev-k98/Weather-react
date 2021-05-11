@@ -23,7 +23,7 @@ const AddCity = () => {
     const onCLickListener = (city) => {
         axios
             .get(
-                `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=0c712e338cabb3996a78ae788fa566a1`
+                `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=0c712e338cabb3996a78ae788fa566a1`
             )
             .then((res) => addCityData(res.data))
             .catch((err) => setErr(true));
