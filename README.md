@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Weather Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_This application is created using react.js ans mainly focuses on context api._
 
-## Available Scripts
+**Here in this application we can find and store data for up-to 5 locations, context helps us store data globally and also created methods to switch between and delete places.**
 
-In the project directory, you can run:
+_**hooks/api used in this application**_
 
-### `npm start`
+-   State hook (useState) to store and toggle the details fot a particular place.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-   context api for creating a global context storing the data.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+-   Context hook (instead of consumer of this.context) for getting the context.
 
-### `npm test`
+-   No effect or lifecycle methods as it updates the component as the state updates.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   used open weather map api for fetching data according to the city named.
 
-### `npm run build`
+_**How does the application work**_
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   Here we have an input field which takes the name of the city.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-   the name then is sent to the server with the help of the api used,
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   api gets data corresponding to the most suitable place as provided,
 
-### `npm run eject`
+-   the response is then deconstructed and stored in the context store or the global storage,
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+-   actions corresponding to show particular details or remove some data are created in the App.js file.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-   click on the city name to open it on the maps.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## pending tasks
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-   show details on hover over the saved place

@@ -1,38 +1,232 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@500&display=swap");
+
+body {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    min-width: 450px;
+    justify-content: center;
+    box-sizing: border-box;
+    background: url("./cristina-gottardi-CSpjU6hYo_0-unsplash.jpg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.display-cont {
+    position: relative;
+    height: 200px;
+    width: 320px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto 0;
+    color: #ffffff;
+    background-color: #2b2b2b8e;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #0000009d;
+    margin: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.233);
+    backdrop-filter: blur(3px);
+    transition: all 0.2s ease-in-out;
+    animation: slide-up 0.4s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.error {
+    font-family: Lato, sans-serif;
+    color: rgb(204, 0, 0);
 }
 
-.App-link {
-  color: #61dafb;
+.function {
+    font-size: small;
+    font-family: Roboto, sans-serif;
+    color: rgb(0, 0, 0);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inner-cont {
+    padding: 10px 15px;
+    margin: 4px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: Lato, sans-serif;
+    background-color: #000000af;
+    border-radius: 30px;
+}
+
+.inner-cont span {
+    cursor: pointer;
+}
+
+.init-details {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+.name {
+    transition: all 0.2s ease-in;
+}
+
+.name h1 {
+    max-width: max-content;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+}
+
+.name:hover {
+    transform: scale(1.2);
+}
+
+.name span {
+    font-family: Lato, sans-serif;
+}
+
+.other-details {
+    padding: 10px 0;
+    font-family: Lato, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(255, 0, 0, 0.548);
+    border-radius: 30px;
+    color: #ffffff;
+}
+
+.other-details label {
+    transition: all 0.2s ease-in;
+}
+
+.other-details label:hover {
+    transform: scale(1.2);
+}
+
+.other-details span {
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+}
+
+.remove {
+    background: url("./5534738001581068811.svg") no-repeat;
+    background-color: #ffffff41;
+    margin-left: 5px;
+    height: 20px;
+    width: 20px;
+    background-size: 15px;
+    background-position: center;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+}
+
+.remove-main {
+    position: absolute;
+    background: url("./5534738001581068811.svg") no-repeat;
+    background-color: #ffffff41;
+    margin-left: 5px;
+    height: 25px;
+    width: 25px;
+    background-size: 20px;
+    background-position: center;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    top: 10px;
+    right: 10px;
+}
+
+.search {
+    padding: 2em;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search input {
+    font-family: Roboto, sans-serif;
+    padding: 1em 2em;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 20px #808080;
+}
+
+.search button {
+    position: absolute;
+    right: 34px;
+    padding: 1.5rem;
+    background-image: url("./search_black_24dp.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 2rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.search button:hover {
+    background-color: #80808059;
+    height: 30px;
+    width: 30px;
+    transform: scale(1.1);
+}
+
+.title {
+    margin-top: 5rem;
+    padding: 0;
+    font-family: Lato, sans-serif;
+}
+
+.weather-cont {
+    display: flex;
+    width: 400px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.weather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Roboto, sans-serif;
+    transition: all 0.2s ease-in;
+}
+
+.weather:hover {
+    transform: scale(1.2);
+}
+
+.weather img {
+    height: 75px;
+    width: 75px;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(40px);
+        transform: rotateZ(10px);
+    }
+    100% {
+        transform: rotateZ(0px);
+        transform: translateY(0px);
+    }
 }
