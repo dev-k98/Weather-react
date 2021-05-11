@@ -8,7 +8,6 @@ const CityList = () => {
     const { cities, showDetails, removeCity } = useContext(myContext);
 
     const openMap = (city, country) => {
-        console.log(city);
         window.open(
             `https://www.google.com/maps/place/${city},+${country}`,
             "_blank"
@@ -40,7 +39,7 @@ const CityList = () => {
                             </div>
                             <div className="weather">
                                 <img
-                                    src={`http://openweathermap.org/img/wn/${item.icon}@2x.png`}
+                                    src={`https://openweathermap.org/img/wn/${item.icon}@2x.png`}
                                     alt="icon"></img>
                                 <span>{item.weather}</span>
                             </div>
