@@ -33,3 +33,7 @@ _**How does the application work**_
 ## pending tasks
 
 -   show details on hover over the saved place
+
+## hosted
+
+https://weather-application-context.netlify.app
